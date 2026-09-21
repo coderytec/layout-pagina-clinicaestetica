@@ -1,0 +1,53 @@
+.authority-section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.authority-tag {
+  color: #b08b42;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.authority-title {
+  font-family: var(--font-serif, "Cormorant Garamond", serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #111111;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .authority-title { font-size: 3rem; }
+}
+
+.stat-number {
+  font-family: var(--font-serif, "Cormorant Garamond", serif);
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #111111;
+}
+
+@media (min-width: 640px) {
+  .stat-number { font-size: 2.25rem; }
+}
+
+.stat-label {
+  font-size: 0.6875rem;
+  color: #78716c;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+.authority-section {
+  background-color: #ffffff;
+}
+
+.authority-section img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}

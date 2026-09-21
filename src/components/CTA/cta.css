@@ -1,0 +1,43 @@
+.cta-section {
+  position: relative;
+  background-color: #111111;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Efeito de luz ambiente de fundo */
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+
+.cta-btn {
+  background-color: #c5a059;
+  color: #ffffff;
+  padding: 1.125rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 30px -5px rgba(197, 160, 89, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cta-btn:hover {
+  background-color: #d4b06a;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -5px rgba(197, 160, 89, 0.6);
+}

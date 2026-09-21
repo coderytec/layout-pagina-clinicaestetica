@@ -1,0 +1,62 @@
+.modules-section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: var(--bg-sand-light, #f3efe6);
+  position: relative;
+  overflow: hidden;
+}
+
+.treatment-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid rgba(229, 222, 201, 0.7);
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.03);
+}
+
+/* Efeito de brilho/borda dourada fluida ao passar o mouse */
+.treatment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #c5a059, #ebd9bc);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px -10px rgba(197, 160, 89, 0.18);
+  border-color: #c5a059;
+}
+
+.treatment-card:hover::before {
+  opacity: 1;
+}
+
+.treatment-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: #faf8f5;
+  border: 1px solid #ebd9bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c5a059;
+  font-size: 1.25rem;
+  transition: all 0.4s ease;
+}
+
+.treatment-card:hover .treatment-icon-wrapper {
+  background-color: #c5a059;
+  color: #ffffff;
+  transform: scale(1.05) rotate(3deg);
+  border-color: #c5a059;
+}

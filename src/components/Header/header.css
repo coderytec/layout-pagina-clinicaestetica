@@ -1,0 +1,112 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-logo {
+  font-family: var(--font-serif, "Cormorant Garamond", serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: #1c1917;
+  text-decoration: none;
+}
+
+.header-nav-link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #44403c;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.header-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #c5a059;
+  transition: width 0.3s ease;
+}
+
+.header-nav-link:hover {
+  color: #c5a059;
+}
+
+.header-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Botão do WhatsApp Dinâmico e Sofisticado */
+.whatsapp-cta-btn {
+  background-color: #c5a059;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 20px -5px rgba(197, 160, 89, 0.4);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid #d4b06a;
+}
+
+.whatsapp-cta-btn:hover {
+  background-color: #b08b42;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px -5px rgba(197, 160, 89, 0.6);
+}
+
+/* Menu Mobile (Gaveta Lateral) */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background-color: #faf8f5;
+  z-index: 1100;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.mobile-menu-drawer.open {
+  transform: translateX(0);
+}
