@@ -4,7 +4,7 @@ import "./modules.css";
 export const Modules: React.FC = () => {
   const treatments = [
     {
-      icon: "fa-solid fa-sparkles",
+      icon: "fa-spa",
       category: "Facial Premium",
       title: "Harmonização Facial",
       desc: "Técnicas avançadas e seguras para restaurar proporções, volume e jovialidade com extrema naturalidade e sofisticação."
