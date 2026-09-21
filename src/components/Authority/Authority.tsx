@@ -41,7 +41,7 @@ export const Authority: React.FC = () => {
 
             {/* Botões Dinâmicos para trocar a foto */}
             <div className="flex gap-3 justify-center pt-2">
-              {clinicImages.map((img, idx) => (
+              {clinicImages.map((_,idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveImage(idx)}
